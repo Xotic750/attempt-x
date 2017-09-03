@@ -42,15 +42,17 @@ var arrayLikeSlice = require('array-like-slice-x');
  * //   value: 3
  * // }
  *
+ * var thisArg = [];
  * function pusher(a, b) {
  *   return this.push(a, b);
  * }
  *
- * attempt.call([], pusher, 1, 2);
+ * attempt.call(thisArg, pusher, 1, 2);
  * // {
  * //   threw: false,
- * //   value: [1, 2]
+ * //   value: 2
  * // }
+ * // thisArg => [1, 2];
  */
 module.exports = function attempt(fn) {
   try {
