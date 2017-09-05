@@ -1,6 +1,6 @@
 /**
  * @file Invokes function, returning an object of the results.
- * @version 1.0.0
+ * @version 1.1.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
