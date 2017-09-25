@@ -1,6 +1,6 @@
 /**
  * @file Invokes function, returning an object of the results.
- * @version 1.1.0
+ * @version 1.1.1
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -9,7 +9,21 @@
 
 'use strict';
 
-var arrayLikeSlice = require('array-like-slice-x');
+var getArgs = function _getArgs(args) {
+  var length = args.length >>> 0;
+  var array = [];
+  var argLength = length - 1;
+  if (argLength < 1) {
+    return array;
+  }
+
+  array.length = argLength;
+  for (var index = 1; index < length; index += 1) {
+    array[index - 1] = args[index];
+  }
+
+  return array;
+};
 
 /**
  * This method attempts to invoke the function, returning either the result or
@@ -58,7 +72,7 @@ module.exports = function attempt(fn) {
   try {
     return {
       threw: false,
-      value: fn.apply(this, arrayLikeSlice(arguments, 1))
+      value: fn.apply(this, getArgs(arguments))
     };
   } catch (e) {
     return {
