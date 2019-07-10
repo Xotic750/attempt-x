@@ -21,30 +21,29 @@
 <a name="module_attempt-x"></a>
 
 ## attempt-x
+
 Invokes function, returning an object of the results.
 
-**Version**: 1.1.3  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_attempt-x--module.exports"></a>
 
 ### `module.exports(fn, [...args])` ⇒ <code>Object</code> ⏏
+
 This method attempts to invoke the function, returning either the result or
 the caught error object. Any additional arguments are provided to the
 function when it's invoked.
 
 **Kind**: Exported function  
-**Returns**: <code>Object</code> - Returns an object of the result.  
+**Returns**: <code>Object</code> - Returns an object of the result.
 
-| Param | Type | Description |
-| --- | --- | --- |
-| fn | <code>function</code> | The function to attempt. |
-| [...args] | <code>\*</code> | The arguments to invoke the function with. |
+| Param     | Type                  | Description                                |
+| --------- | --------------------- | ------------------------------------------ |
+| fn        | <code>function</code> | The function to attempt.                   |
+| [...args] | <code>\*</code>       | The arguments to invoke the function with. |
 
-**Example**  
+**Example**
+
 ```js
-var attempt = require('attempt-x');
+import attempt from 'attempt-x';
 
 function thrower() {
   throw new Error('Threw');
@@ -66,7 +65,7 @@ attempt(sumArgs, 1, 2);
 //   value: 3
 // }
 
-var thisArg = [];
+const thisArg = [];
 function pusher(a, b) {
   return this.push(a, b);
 }
