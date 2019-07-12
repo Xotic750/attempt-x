@@ -1,13 +1,14 @@
 /*!
 {
+  "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017-present",
-  "date": "2019-07-10T17:02:08.935Z",
+  "date": "2019-07-12T13:10:37.310Z",
   "describe": "",
   "description": "Invokes function, returning an object of the results.",
   "file": "attempt-x.js",
-  "hash": "6d32597d60c5d33f89b8",
+  "hash": "9bf220810a54a74e07b4",
   "license": "MIT",
-  "version": "2.0.0"
+  "version": "2.0.1"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -124,21 +125,21 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return attempt; });
 /**
  * This method attempts to invoke the function, returning either the result or
  * the caught error object. Any additional arguments are provided to the
  * function when it's invoked.
  *
- * @param {Function} fn - The function to attempt.
+ * @param {Function} [fn] - The function to attempt.
  * @param {...*} [args] - The arguments to invoke the function with.
  * @returns {object} Returns an object of the result.
  */
-module.exports = function attempt(fn) {
+function attempt(fn) {
   try {
     for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
       args[_key - 1] = arguments[_key];
@@ -146,6 +147,8 @@ module.exports = function attempt(fn) {
 
     return {
       threw: false,
+
+      /* eslint-disable-next-line babel/no-invalid-this */
       value: fn.apply(this, args)
     };
   } catch (e) {
@@ -154,7 +157,10 @@ module.exports = function attempt(fn) {
       value: e
     };
   }
-};
+}
+;
+
+
 
 /***/ })
 /******/ ]);

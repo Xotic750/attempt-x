@@ -7,17 +7,25 @@
  * @param {...*} [args] - The arguments to invoke the function with.
  * @returns {object} Returns an object of the result.
  */
-export default function attempt(fn, ...args) {
+export default function attempt(fn) {
   try {
+    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
     return {
       threw: false,
+
       /* eslint-disable-next-line babel/no-invalid-this */
-      value: fn.apply(this, args),
+      value: fn.apply(this, args)
     };
   } catch (e) {
     return {
       threw: true,
-      value: e,
+      value: e
     };
   }
-};
+}
+;
+
+//# sourceMappingURL=attempt-x.esm.js.map
