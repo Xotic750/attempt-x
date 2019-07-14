@@ -26,6 +26,5 @@ export default function attempt(fn) {
     };
   }
 }
-;
 
 //# sourceMappingURL=attempt-x.esm.js.map

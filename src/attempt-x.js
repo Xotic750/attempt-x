@@ -20,4 +20,4 @@ export default function attempt(fn, ...args) {
       value: e,
     };
   }
-};
+}
