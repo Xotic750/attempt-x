@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017-present",
-  "date": "2019-07-17T13:27:09.046Z",
+  "date": "2019-07-17T18:13:24.801Z",
   "describe": "",
   "description": "Invokes function, returning an object of the results.",
   "file": "attempt-x.js",
   "hash": "c1f519133f7e8a2ee7ab",
   "license": "MIT",
-  "version": "2.0.7"
+  "version": "2.0.8"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
