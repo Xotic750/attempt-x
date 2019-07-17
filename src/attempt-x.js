@@ -7,7 +7,7 @@
  * @param {...*} [args] - The arguments to invoke the function with.
  * @returns {object} Returns an object of the result.
  */
-export default function attempt(fn, ...args) {
+const attempt = function attempt(fn, ...args) {
   try {
     return {
       threw: false,
@@ -20,4 +20,6 @@ export default function attempt(fn, ...args) {
       value: e,
     };
   }
-}
+};
+
+export default attempt;
