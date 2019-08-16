@@ -50,7 +50,10 @@
   "bugs": {
     "url": "https://github.com/Xotic750/attempt-x/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "simple-call-x": "^1.0.1",
+    "util-pusher-x": "^1.0.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
