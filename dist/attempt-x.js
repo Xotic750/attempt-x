@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017-present",
-  "date": "2019-08-28T16:40:29.433Z",
+  "date": "2019-08-30T21:24:27.481Z",
   "describe": "",
   "description": "Invokes function, returning an object of the results.",
   "file": "attempt-x.js",
